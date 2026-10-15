@@ -1,0 +1,39 @@
+{
+  "name": "portfolio-server",
+  "version": "1.0.0",
+  "description": "Express and PostgreSQL REST API backend for Roswell Cruz portfolio",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "build": "prisma generate",
+    "postinstall": "prisma generate",
+    "dev": "nodemon src/server.js",
+    "db:init": "node migrate.js",
+    "prisma:generate": "prisma generate",
+    "prisma:studio": "prisma studio",
+    "db:push": "prisma db push"
+  },
+  "keywords": [
+    "express",
+    "postgresql",
+    "pern",
+    "portfolio",
+    "api",
+    "prisma"
+  ],
+  "author": "Roswell Cruz",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^6.4.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-rate-limit": "^8.7.1",
+    "helmet": "^8.3.0",
+    "pg": "^8.12.0",
+    "prisma": "^6.4.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

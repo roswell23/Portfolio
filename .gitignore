@@ -1,0 +1,65 @@
+# ==============================================================================
+# Git Ignore Configuration - Roswell Cruz Portfolio
+# Protects secrets, excludes build artifacts, dependencies, and OS metadata
+# ==============================================================================
+
+# Dependencies
+node_modules/
+*/node_modules/
+package-lock.json.bak
+
+# Production Build Outputs
+dist/
+build/
+*/dist/
+*/build/
+out/
+.next/
+
+# Environment Variables & Secrets (CRITICAL)
+.env
+.env.*
+!.env.example
+!*/.env.example
+*.env
+*.pem
+*.key
+*.cert
+
+# Logs & Debug Output
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+logs/
+
+# Testing & Code Coverage
+coverage/
+*.lcov
+.nyc_output/
+
+# Temporary & Cache Directories
+.cache/
+.temp/
+.tmp/
+tmp/
+.eslintcache
+.vite/
+*/.vite/
+
+# Editor & OS Metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.swo
+
+# Prisma Generated Client Engine Binaries (optional runtime artifacts)
+*.sqlite
+*.sqlite-journal
